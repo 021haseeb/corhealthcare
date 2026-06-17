@@ -7,6 +7,21 @@ import Footer from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({ subsets: ['latin'], variable: '--font-poppins', weight: ['400', '500', '600', '700'] });
 
+function getMetadataBase(): URL {
+  const fallback = new URL('https://corhealth.example');
+  const raw = process.env.NEXT_PUBLIC_SITE_URL;
+
+  if (!raw) return fallback;
+
+  try {
+    return new URL(raw);
+  } catch {
+    // If Vercel env var is misconfigured (missing protocol, invalid URL, etc.),
+    // avoid build-time crashes.
+    return fallback;
+  }
+}
+
 export const metadata: Metadata = {
   title: {
     default: 'Cor Health | Compassionate Care. Comfortable Living.',
@@ -14,7 +29,7 @@ export const metadata: Metadata = {
   },
   description:
     'Premium healthcare and residential care services. Compassionate care, comfortable living, and trusted healthcare partners.',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://corhealth.example'),
+  metadataBase: getMetadataBase(),
 
   keywords: ['residential care', 'healthcare services', 'senior living', 'assisted living', 'memory care'],
   openGraph: {
@@ -31,7 +46,10 @@ export const metadata: Metadata = {
   },
 };
 
+
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} bg-light text-dark antialiased`}>
