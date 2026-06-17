@@ -14,7 +14,8 @@ export const metadata: Metadata = {
   },
   description:
     'Premium healthcare and residential care services. Compassionate care, comfortable living, and trusted healthcare partners.',
-  metadataBase: new URL('https://corhealth.example'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://corhealth.example'),
+
   keywords: ['residential care', 'healthcare services', 'senior living', 'assisted living', 'memory care'],
   openGraph: {
     title: 'Cor Health | Compassionate Care. Comfortable Living.',

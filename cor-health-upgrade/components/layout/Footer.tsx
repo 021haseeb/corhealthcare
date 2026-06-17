@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
 
+
 const quickLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
@@ -14,7 +15,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 border-t border-white/10 bg-dark/40">
+    <footer className="mt-16 border-t border-white/10 bg-gradient-to-b from-[#0b1220] via-[#0f172a] to-[#050814]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
@@ -26,14 +27,44 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex items-center gap-3">
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-light/90 hover:bg-white/10 transition"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
+
+  {/* LinkedIn */}
+  <a
+    href="#"
+    aria-label="LinkedIn"
+    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-light/90 hover:bg-white/10 transition"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  {/* Facebook */}
+  <a
+    href="#"
+    aria-label="Facebook"
+    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-light/90 hover:bg-white/10 transition"
+  >
+    <i className="fa-brands fa-facebook-f"></i>
+  </a>
+
+  {/* Twitter / X */}
+  <a
+    href="#"
+    aria-label="Twitter"
+    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-light/90 hover:bg-white/10 transition"
+  >
+    <i className="fa-brands fa-x-twitter"></i>
+  </a>
+
+  {/* WhatsApp */}
+  <a
+    href="#"
+    aria-label="WhatsApp"
+    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-light/90 hover:bg-white/10 transition"
+  >
+    <i className="fa-brands fa-whatsapp"></i>
+  </a>
+
+</div>
           </div>
 
           <div className="md:col-span-3">
