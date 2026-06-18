@@ -22,8 +22,8 @@ const config: Config = {
         hero: 'linear-gradient(120deg, rgba(20,184,166,0.18), rgba(15,118,110,0.06) 55%, rgba(248,250,252,0.0) 100%)',
       },
       fontFamily: {
-        inter: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
-        poppins: ['Poppins', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
+        inter: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
+        poppins: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial'],
       },
       keyframes: {
         float: {
